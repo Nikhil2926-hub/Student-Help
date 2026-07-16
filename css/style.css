@@ -1,0 +1,255 @@
+/* css/style.css */
+/* Premium Custom Overrides on top of Bootstrap 5 - Luxury Academy Edition */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Luxury Obsidian / Slate Palette */
+  --bg-dark-color: #0b0a08;
+  --bg-card-color: rgba(18, 16, 13, 0.7);
+  --border-glass: rgba(223, 183, 108, 0.12);
+  --gold-glow: rgba(223, 183, 108, 0.18);
+  --accent-color: #dfb76c;
+  --accent-color-dark: #b38f4d;
+  --font-primary: 'Outfit', sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --glass-blur: 16px;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-dark-color);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(223, 183, 108, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(179, 143, 77, 0.03) 0%, transparent 40%);
+  color: #eeeeee;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Elegant luxury headers */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-serif);
+  letter-spacing: 0.03em;
+  color: #f7f6f2 !important;
+}
+
+/* Custom Glassmorphism Card with subtle gold highlights */
+.glass-card {
+  background: var(--bg-card-color);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--border-glass);
+  border-radius: 14px;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.6);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(223, 183, 108, 0.35);
+  box-shadow: 0 15px 45px rgba(223, 183, 108, 0.06);
+  transform: translateY(-2px);
+}
+
+/* Luxury Input Forms & Dropdowns */
+.form-control, .form-select {
+  background-color: rgba(12, 11, 9, 0.8) !important;
+  color: #f5eedc !important;
+  border: 1px solid var(--border-glass) !important;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: rgba(18, 16, 13, 0.9) !important;
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 3px var(--gold-glow) !important;
+}
+
+.form-control::placeholder {
+  color: #7b7260;
+}
+
+/* Premium Gold Buttons with metallic accents */
+.btn-primary-custom {
+  background: linear-gradient(135deg, #dfb76c 0%, #b38f4d 100%) !important;
+  border: 1px solid rgba(223, 183, 108, 0.2) !important;
+  color: #0c0b09 !important;
+  padding: 0.7rem 1.5rem !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 18px rgba(223, 183, 108, 0.2) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 24px rgba(223, 183, 108, 0.35) !important;
+  filter: brightness(1.08);
+}
+
+.btn-secondary-custom {
+  background-color: rgba(223, 183, 108, 0.04) !important;
+  border: 1px solid rgba(223, 183, 108, 0.22) !important;
+  color: #dfb76c !important;
+  padding: 0.7rem 1.5rem !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.03em;
+  font-size: 0.85rem;
+  transition: all 0.3s ease !important;
+}
+
+.btn-secondary-custom:hover {
+  background-color: rgba(223, 183, 108, 0.1) !important;
+  border-color: var(--accent-color) !important;
+  color: #fff !important;
+}
+
+/* Premium Crimson Danger Buttons */
+.btn-danger {
+  background: linear-gradient(135deg, #c93b4a 0%, #9e2a36 100%) !important;
+  border: 1px solid rgba(201, 59, 74, 0.25) !important;
+  color: #ffffff !important;
+  padding: 0.7rem 1.5rem !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 18px rgba(201, 59, 74, 0.25) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-danger:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 24px rgba(201, 59, 74, 0.4) !important;
+  filter: brightness(1.08);
+}
+
+/* Custom Badges - Refined luxury color sets */
+.badge-custom {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.35rem 0.7rem;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.badge-study { background-color: rgba(223, 183, 108, 0.15); color: #dfb76c; border: 1px solid rgba(223, 183, 108, 0.25); }
+.badge-assign { background-color: rgba(16, 185, 129, 0.12); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.22); }
+.badge-paper { background-color: rgba(245, 158, 11, 0.12); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.22); }
+.badge-prac { background-color: rgba(139, 92, 246, 0.12); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.22); }
+.badge-vid { background-color: rgba(236, 72, 153, 0.12); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.22); }
+
+/* Dashboard layout grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar styling for multirole dashboard */
+.custom-sidebar {
+  background-color: #0c0b09;
+  border-right: 1px solid var(--border-glass);
+  padding: 2.2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.nav-link-custom {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.8rem 1.1rem;
+  color: #a49f92;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  background-color: rgba(223, 183, 108, 0.05);
+  color: var(--accent-color);
+}
+
+.nav-link-custom.active {
+  background: linear-gradient(135deg, #dfb76c 0%, #a47c36 100%);
+  color: #0c0b09;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(223, 183, 108, 0.25);
+}
+
+.user-profile-widget {
+  margin-top: auto;
+  border-top: 1px solid var(--border-glass);
+  padding-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Main workspace area */
+.workspace {
+  padding: 2.8rem;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+/* Responsive sidebars */
+@media (max-width: 991.98px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .custom-sidebar {
+    display: none;
+  }
+  .custom-sidebar.active {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1040;
+    width: 270px;
+  }
+}
+
+/* Password visibility toggle styling */
+.password-group .form-control {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-right: none !important;
+}
+.password-group .btn {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: none !important;
+  background-color: rgba(12, 11, 9, 0.8) !important;
+  border: 1px solid var(--border-glass) !important;
+  border-left: none !important;
+  color: #7b7260 !important;
+  padding: 0.75rem 1.25rem !important;
+}
+.password-group .btn:hover {
+  color: var(--accent-color) !important;
+  background-color: rgba(223, 183, 108, 0.05) !important;
+}
+.password-group .form-control:focus + .btn {
+  border-color: var(--accent-color) !important;
+  border-left: none !important;
+}
